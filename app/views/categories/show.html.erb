@@ -1,0 +1,14 @@
+<h4 class='memo-lists'><%= @category.name%></h4>
+<% @memos.each do |memo| %>
+    <div class="list">
+        <p><%=memo.date%></p>
+        <p class="text">[プログラミング言語]: <%=memo.title%></p>
+        <p class="text">[勉強内容]: <%=memo.body%></p>
+        <p class="text">[勉強時間]: <%=memo.time%></p>
+        <p><%= memo.category.name%></p>
+        <div class="buttons">
+            <a class="btn btn-dark" href="/memos/<%=memo.id%>" data-method="delete">削除</a>
+            <a class="btn btn-dark" href="/memos/<%=memo.id%>/edit">編集</a>
+        </div>
+    </div>
+<% end %>

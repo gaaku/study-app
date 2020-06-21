@@ -1,0 +1,25 @@
+<div class='memo-lists'>
+<%= form_tag("/memos/"+@memo.id.to_s,:method=>:patch) do %>
+    <div class="form-group">
+        <%= label_tag "form-title", 'プログラミング言語'%>
+        <%= text_field :memos, :title, id:"form-title",class:"form-control",value: @memo.title %>
+    </div>
+    <div class="form-group">
+        <%= label_tag "form-body", '勉強内容'%>
+        <%= text_field :memos, :body, id:"form-body",class:"form-control",value: @memo.body %>
+    </div>
+    <div class="form-group">
+        <%= label_tag "form-time", '勉強時間'%>
+        <%= text_field :memos, :time, id:"form-time",class:"form-control",value: @memo.time %>
+    </div>
+    <div class="form-group">
+        <%= label_tag "form-date", '日付'%>
+        <%= text_field :memos, :date, id:"form-date",class:"form-control",value: @memo.date %>
+    </div>
+    <div class="form-group">
+        <%= label_tag "form-date", '月'%>
+        <%= select_tag 'memos[category_id]', options_from_collection_for_select(@categories, :id, :name),class:"form-control"%>
+    </div>
+    <%= submit_tag '更新',class:"btn btn-secondary" %>
+<% end %>
+</div>

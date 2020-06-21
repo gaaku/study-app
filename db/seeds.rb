@@ -1,0 +1,13 @@
+Category.find_or_create_by(name:"1月")
+Category.find_or_create_by(name:"2月")
+Category.find_or_create_by(name:"3月")
+Category.find_or_create_by(name:"4月")
+Category.find_or_create_by(name:"5月")
+Category.find_or_create_by(name:"6月")
+Category.find_or_create_by(name:"7月")
+Category.find_or_create_by(name:"8月")
+Category.find_or_create_by(name:"9月")
+Category.find_or_create_by(name:"10月")
+Category.find_or_create_by(name:"11月")
+Category.find_or_create_by(name:"12月")
+
